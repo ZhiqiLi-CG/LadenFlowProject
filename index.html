@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Lagrangian Covector Fluid with Free Surface</title>
+  <title>Particle-Laden Fluid on Flow Maps</title>
   <link rel="icon" type="image/x-icon" href="static/images/gatech.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,25 +52,23 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Lagrangian Covector Fluid with Free Surface</h1>
+            <h1 class="title is-1 publication-title">Particle-Laden Fluid on Flow Maps</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Zhiqi Li</a><!-- <sup>*</sup> -->,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Zhiqi Li<sup>1</sup></sup></a><!-- <sup>*</sup> -->,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Barnabás Börcsök</a><!-- <sup>*</sup> -->,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Duowen Chen<sup>1</sup></a><!-- <sup>*</sup> -->,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Duowen Chen</a>,</span>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Candong Lin<sup>1</sup></a>,</span>
                     <span class="author-block">
-                      <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yutong Sun</a>,</span>
+                      <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jinyuan Liu<sup>2</sup></a>,</span>
                       <span class="author-block">
-                        <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Bo Zhu</a>,</span>
-                        <span class="author-block">
-                          <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Greg Turk</a>,</span>
+                        <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Bo Zhu<sup>1</sup></a>,</span>
                       </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Georgia Institute of Technology<br>Proc. SIGGRAPH 2024</span>
+                    <span class="author-block"><sup>1</sup>Georgia Institute of Technology<br><sup>2</sup>Dartmouth College<br>Proc. SIGGRAPH Asia 2024</span>
                     <!--<span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
@@ -132,7 +130,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/teaser3.pdf" alt="MY ALT TEXT"/>
+      <img src="static/images/teaser.jpg" alt="MY ALT TEXT"/>
         <h4 class="subtitle has-text-centered">
           Examples of ink diffusion phenomena simulated by our method. Five simulation snapshots are shown from left to right: the interaction of two ink
           drops forming ink rings and filaments; the formation of complex patterns as ink flows down a porous plate; the bulging, breakup, and torus formation of the
@@ -151,7 +149,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This paper introduces a novel Lagrangian fluid solver based on covector flow maps. We aim to address the challenges of establishing a robust flow-map solver for incompressible fluids under complex boundary conditions. Our key idea is to use particle trajectories to establish precise flow maps and tailor path integrals of physical quantities along these trajectories to reformulate the Poisson problem during the projection step. We devise a decoupling mechanism based on path-integral identities from flow-map theory. This mechanism integrates long-range flow maps for the main fluid body into a short-range projection framework, ensuring a robust treatment of free boundaries. We show that our method can effectively transform a long-range projection problem with integral boundaries into a Poisson problem with standard boundary conditions -- specifically, zero Dirichlet on the free surface and zero Neumann on solid boundaries. This transformation significantly enhances robustness and accuracy, extending the applicability of flow-map methods to complex free-surface problems.
+            We propose a novel framework for simulating ink as a particle-laden flow using particle flow maps. Our method addresses the limitations of existing flow-map techniques, which struggle with dissipative forces like viscosity and drag, thereby extending the application scope from solving the Euler equations to solving the Navier-Stokes equations with accurate viscosity and laden-particle treatment. Our key contribution lies in a coupling mechanism for two particle systems, coupling physical \revise{sediment} particles and virtual flow-map particles on a background grid by solving a Poisson system. We implemented a novel path integral formula to incorporate viscosity and drag forces into the particle flow map process. Our approach enables state-of-the-art simulation of various particle-laden flow phenomena, exemplified by the bulging and breakup of suspension drop tails, torus formation, torus disintegration, and the coalescence of sedimenting drops. In particular, our method delivered high-fidelity ink diffusion simulations by accurately capturing vortex bulbs, viscous tails, fractal branching, and hierarchical structures.
           </p>
         </div>
       </div>
@@ -205,7 +203,7 @@
         <div class="column is-four-fifths">
           <div class="publication-video">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/MCa_CwekSAM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/watch?v=JzozR1t-sIE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -247,7 +245,7 @@
 <section class="section">
   <div class="container is-max-desktop content">
       <h2 class="title">Paper</h2>
-      <iframe  src="static/pdfs/2405.09801v1.pdf" width="100%" height="550">
+      <iframe  src="static/pdfs/SASIA_2024__Particle_Laden_Flow.pdf" width="100%" height="550">
           </iframe>
   </div>
   </section>
